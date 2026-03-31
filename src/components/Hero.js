@@ -1,7 +1,9 @@
+import Container from "@/components/Container"
+
 export default function Hero() {
   return (
     <section className="py-16">
-      <div className="max-w-6xl mx-auto px-4">
+      <Container>
          
           <h2 className="text-4xl font-bold">
             Get your consultation online
@@ -15,7 +17,7 @@ export default function Hero() {
             Get Started
           </button>
 
-      </div>
+      </Container>
     </section>
   )
 }
