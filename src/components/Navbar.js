@@ -2,7 +2,7 @@ export default function Navbar() {
     return (
         <nav className="border-b">
             <div className="max-w-6xl mx-auto px-4">
-                <div className="flex justify-between items-center p-6">
+                <div className="flex justify-between items-center">
                     <h1 className="font-bold">Relief</h1>
 
                     <div className="flex gap-4">
