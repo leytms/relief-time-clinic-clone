@@ -9,8 +9,26 @@ export default function Features() {
                 </h3>
 
                 <p className="mt-4">
-                    Simple, fast and reliable
+                    Simple, fast and reliable service
                 </p>
+
+                <div className="grid gap-6 md:grid-cols-3">
+                    <div className="p-6 border rounded">
+                        <h4 className="font-semibold">Fast approval</h4>
+                        <p className="mt-2 text-sm">Quick and easy process.</p>
+                    </div>
+
+                    <div className="p-6 border rounded">
+                        <h4 className="font-semibold">Private</h4>
+                        <p className="mt-2 text-sm">Your information stays secure</p>
+                    </div>
+
+                    <div className="p-6 border rounden">
+                        <h4 className="font-semibold">Online access</h4>
+                        <p className="mt-2 text-sm">Everything from your home</p>
+                    </div>
+                                        
+                </div>
             </Container>
         </section>
     )
