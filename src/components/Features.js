@@ -12,7 +12,7 @@ export default function Features() {
                     Simple, fast and reliable service
                 </p>
 
-                <div className="grid gap-6 md:grid-cols-3">
+                <div className="grid gap-6 mt-10 md:grid-cols-3">
                     <div className="p-6 border rounded">
                         <h4 className="font-semibold">Fast approval</h4>
                         <p className="mt-2 text-sm">Quick and easy process.</p>
@@ -27,7 +27,7 @@ export default function Features() {
                         <h4 className="font-semibold">Online access</h4>
                         <p className="mt-2 text-sm">Everything from your home</p>
                     </div>
-                                        
+
                 </div>
             </Container>
         </section>
