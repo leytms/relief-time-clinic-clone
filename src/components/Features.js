@@ -1,4 +1,19 @@
 import Container from "@/components/Container"
+const features = [
+    {
+        title: "Fast approval",
+        description: "Quick and easy process",
+    },
+    {
+        title: "Private",
+        description: "Your information stays secure"
+    },
+    {
+        title: "Online access",
+        description: "Everything from your home"
+    },
+]
+
 
 export default function Features() {
     return (
@@ -13,20 +28,14 @@ export default function Features() {
                 </p>
 
                 <div className="grid gap-6 mt-10 md:grid-cols-3">
-                    <div className="p-6 border rounded">
-                        <h4 className="font-semibold">Fast approval</h4>
-                        <p className="mt-2 text-sm">Quick and easy process.</p>
-                    </div>
-
-                    <div className="p-6 border rounded">
-                        <h4 className="font-semibold">Private</h4>
-                        <p className="mt-2 text-sm">Your information stays secure</p>
-                    </div>
-
-                    <div className="p-6 border rounden">
-                        <h4 className="font-semibold">Online access</h4>
-                        <p className="mt-2 text-sm">Everything from your home</p>
-                    </div>
+                    {features.map((feature, index) => {
+                        return (
+                            <div key={index} className="p-6 border rounded">
+                                <h4 className="font-semibold">{feature.title}</h4>
+                                <p className="mt-2 text-sm">{feature.description}</p>
+                            </div>
+                        )
+                    })}
 
                 </div>
             </Container>
