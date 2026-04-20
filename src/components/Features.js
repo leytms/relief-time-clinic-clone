@@ -1,4 +1,5 @@
 import Container from "@/components/Container"
+import FeatureCards from "@/components/FeatureCards"
 const features = [
     {
         title: "Fast approval",
@@ -28,14 +29,13 @@ export default function Features() {
                 </p>
 
                 <div className="grid gap-6 mt-10 md:grid-cols-3">
-                    {features.map((feature, index) => {
-                        return (
-                            <div key={index} className="p-6 border rounded">
-                                <h4 className="font-semibold">{feature.title}</h4>
-                                <p className="mt-2 text-sm">{feature.description}</p>
-                            </div>
-                        )
-                    })}
+                    {features.map((feature, index) => (
+                        <FeatureCards 
+                        key={index}
+                        title={feature.title}
+                        description={feature.description}
+                        />                      
+                    ))}
 
                 </div>
             </Container>
