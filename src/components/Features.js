@@ -5,19 +5,22 @@ const features = [
         title: "Fast approval",
         description: "Quick and easy process",
         icon: "⚡",
-        button: "Learn more"
+        button: "Learn more",
+        featured: true
     },
     {
         title: "Private",
         description: "Your information stays secure",
         icon: "⚡",
-        button: "Learn more"
+        button: "Learn more", 
+        featured: false
     },
     {
         title: "Online access",
         description: "Everything from your home",
         icon: "⚡",
-        button: "Learn more"
+        button: "Learn more", 
+        featured: false
     },
 ]
 
@@ -42,6 +45,7 @@ export default function Features() {
                         description={feature.description}
                         icon={feature.icon}
                         button={feature.button}
+                        featured={feature.featured}
                         />                      
                     ))}
 
