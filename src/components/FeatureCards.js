@@ -1,14 +1,12 @@
-export default function FeatureCards({ title, description, icon }) {
+export default function FeatureCards({ title, description, icon, button }) {
     return (
         <div className="p-6 border rounded">
             <div className="flex gap-3 items-center">
-              <h5 className="mt-2 text-2xl">{icon}</h5> 
+              <span className="text-2xl">{icon}</span> 
               <h4 className="font-semibold">{title}</h4> 
             </div>
-            <h4 className="font-semibold">{title}</h4>
-            
-            
-            
+            <p className="mt-2 text-sm">{description}</p>
+            <button className="mt-4 text=sm font=medium">{button}</button>
         </div>
     )
 
