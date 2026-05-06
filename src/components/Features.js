@@ -38,14 +38,14 @@ export default function Features() {
                 </p>
 
                 <div className="grid gap-6 mt-10 md:grid-cols-3">
-                    {features.map((feature, index) => (
+                    {features.map((feature) => (
                         <FeatureCards 
-                        key={index}
+                        key={feature.title}
                         title={feature.title}
                         description={feature.description}
                         icon={feature.icon}
                         button={feature.button}
-                        featured={feature.featured}
+                        featured={feature}
                         />                      
                     ))}
 
