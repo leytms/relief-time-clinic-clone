@@ -18,9 +18,10 @@ export default function Hero() {
           </p>
 
           <button 
-          onClick={() => setIsStarted(true)}
-          className="px-4 py-4 mt-6 rounded">
-            Get Started
+          onClick={() => setIsStarted(!isStarted)}
+          className="px-4 py-4 mt-6 rounded"
+          >
+            {isStarted ? "Show less" : "Get started"}
           </button>
 
           {isStarted && (
