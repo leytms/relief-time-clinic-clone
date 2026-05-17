@@ -12,7 +12,15 @@ export default function Hero() {
   const [isInfoOpen, setIsInfoOpen] = useState(false)
   const [selectedOption, setSelectedOption] = useState("")
 
+  function handleToggleInfo() {
+    if (isInfoOpen) {
+      setSelectedOption("")
+    }
+    setIsInfoOpen((prev) => !prev)
+  }
+
   return (
+    
     <section className="py-16">
       <Container>
          
@@ -25,7 +33,7 @@ export default function Hero() {
           </p>
 
           <button 
-          onClick={() => setIsInfoOpen((prev) => !prev)}
+          onClick={handleToggleInfo}          
           className={`px-4 py-4 mt-6 rounded trasition ${
             isInfoOpen ? "bg-red-500 text-black" : "bg-blue-500 text-black"}`}
           >
