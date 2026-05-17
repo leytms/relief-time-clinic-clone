@@ -45,31 +45,43 @@ export default function Hero() {
               <p className="font-medium">
                 Choose how you want to continue 
               </p>  
+              <div className="py-4">
 
-              <div className="mt-4 flex gap-3">
-                <button 
-                onClick={() => setSelectedOption("Book online")}
-                className={`rounded px-4 py-2 transition ${
-                  selectedOption === "Book online"
-                  ? "bg-blue-600 text white"
-                  : "border bg-red hover:shadow-md"
-                }`}>
-                  Book online
-                </button>
-                <button
-                onClick={() => setSelectedOption("Call clinic")}
-                className={`rounded px-4 py-2 transition ${
-                  selectedOption === "Call clinic"
-                  ? "bg-blue-600 text-white"
-                  : "border bg-red hover:shadow-md"
-                }`}
-                >
-                   Call clinic
-                </button>
-
+                <div className="mt-4 flex gap-3">              
+                  <button 
+                  onClick={() => setSelectedOption("Book online")}
+                  className={`rounded px-4 py-2 transition ${
+                    selectedOption === "Book online"
+                    ? "bg-blue-600 text white"
+                    : "border bg-red hover:shadow-md"
+                  }`}>
+                    Book online
+                  </button>
+                  <button
+                  onClick={() => setSelectedOption("Call clinic")}
+                  className={`rounded px-4 py-2 transition ${
+                    selectedOption === "Call clinic"
+                    ? "bg-blue-600 text-white"
+                    : "border bg-red hover:shadow-md"
+                  }`}
+                  >
+                     Call clinic
+                  </button>
+                </div>
                 {selectedOption && (
                   <p className="py-4">
                     You selected: {selectedOption}
+                  </p>
+                )}
+
+                {selectedOption === "Book online" && (
+                  <p className="text-sm text-grey-600">
+                    Choose a doctor and an available time slot
+                  </p>
+                )}
+                {selectedOption === "Call clinic" && (
+                  <p className="text-sm text-grey-600">
+                    Call the clinic during working hours
                   </p>
                 )}
               
