@@ -4,13 +4,22 @@ import { useState } from "react"
 import Container from "@/components/Container"
 
 const appointmentOptions = [ 
-  { label: "Book online"},
-  { label: "Call clinic"}
+  { 
+    label: "Book online",
+    description: "Choose a doctor and an available time slot"
+  },
+  { 
+    label: "Call clinic",
+    description: "Call the clinic during working hours",
+  },
 ]
 
 export default function Hero() {
   const [isInfoOpen, setIsInfoOpen] = useState(false)
   const [selectedOption, setSelectedOption] = useState("")
+  const sAO = appointmentOptions.find((option) => {
+    return option.label === selectedOption
+  })
 
   function handleToggleInfo() {
     if (isInfoOpen) {
@@ -47,26 +56,24 @@ export default function Hero() {
               </p>  
               <div className="py-4">
 
-                <div className="mt-4 flex gap-3">              
-                  <button 
-                  onClick={() => setSelectedOption("Book online")}
-                  className={`rounded px-4 py-2 transition ${
-                    selectedOption === "Book online"
-                    ? "bg-blue-600 text white"
-                    : "border bg-red hover:shadow-md"
-                  }`}>
-                    Book online
-                  </button>
-                  <button
-                  onClick={() => setSelectedOption("Call clinic")}
-                  className={`rounded px-4 py-2 transition ${
-                    selectedOption === "Call clinic"
-                    ? "bg-blue-600 text-white"
-                    : "border bg-red hover:shadow-md"
-                  }`}
-                  >
-                     Call clinic
-                  </button>
+                <div className="mt-4 flex gap-3">     
+                  {appointmentOptions.map((option) => {
+                    return (
+                      <button 
+                        key={option.label}
+                        onClick={() => setSelectedOption(option.label)}
+                        className={`rounded px-4 py-2 transition ${
+                          selectedOption === option.label
+                           ? "bg-blue-600 text white"
+                           : "border bg-red hover:shadow-md"
+                      }`}>
+                        {option.label}
+                      </button>
+
+                    )
+                  })}         
+                  
+                 
                 </div>
                 {selectedOption && (
                   <p className="py-4">
@@ -74,16 +81,12 @@ export default function Hero() {
                   </p>
                 )}
 
-                {selectedOption === "Book online" && (
-                  <p className="text-sm text-grey-600">
-                    Choose a doctor and an available time slot
+                {sAO && (
+                  <p className="text-sm text-white">
+                    {sAO.description}
                   </p>
                 )}
-                {selectedOption === "Call clinic" && (
-                  <p className="text-sm text-grey-600">
-                    Call the clinic during working hours
-                  </p>
-                )}
+                
               
               </div>            
             </div>
