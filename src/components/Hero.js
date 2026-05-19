@@ -5,10 +5,12 @@ import Container from "@/components/Container"
 
 const appointmentOptions = [ 
   { 
+    id: "book-online",
     label: "Book online",
     description: "Choose a doctor and an available time slot"
   },
   { 
+    id: "call-clinic",
     label: "Call clinic",
     description: "Call the clinic during working hours",
   },
@@ -18,7 +20,7 @@ export default function Hero() {
   const [isInfoOpen, setIsInfoOpen] = useState(false)
   const [selectedOption, setSelectedOption] = useState("")
   const sAO = appointmentOptions.find((option) => {
-    return option.label === selectedOption
+    return option.id === selectedOption
   })
 
   function handleToggleInfo() {
@@ -60,10 +62,10 @@ export default function Hero() {
                   {appointmentOptions.map((option) => {
                     return (
                       <button 
-                        key={option.label}
-                        onClick={() => setSelectedOption(option.label)}
+                        key={option.id}
+                        onClick={() => setSelectedOption(option.id)}
                         className={`rounded px-4 py-2 transition ${
-                          selectedOption === option.label
+                          selectedOption === option.id
                            ? "bg-blue-600 text white"
                            : "border bg-red hover:shadow-md"
                       }`}>
@@ -82,7 +84,7 @@ export default function Hero() {
                 )}
 
                 {sAO && (
-                  <p className="text-sm text-white">
+                  <p className="text-sm">
                     {sAO.description}
                   </p>
                 )}
