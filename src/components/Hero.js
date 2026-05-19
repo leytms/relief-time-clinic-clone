@@ -7,12 +7,14 @@ const appointmentOptions = [
   { 
     id: "book-online",
     label: "Book online",
-    description: "Choose a doctor and an available time slot"
+    description: "Choose a doctor and an available time slot",
+    actionLabel: "Continue to booking",
   },
   { 
     id: "call-clinic",
     label: "Call clinic",
     description: "Call the clinic during working hours",
+    actionLabel: "Show phone number",
   },
 ]
 
@@ -83,12 +85,18 @@ export default function Hero() {
                   </p>
                 )}
 
-                {sAO && (
-                  <p className="text-sm">
-                    {sAO.description}
-                  </p>
-                )}
                 
+                {sAO && (
+                  <div className="mt-10">
+                    <p className="text-sm">
+                      {sAO.description}
+                    </p>
+                  
+                    <button className="border rounded mt-4 px-4 py-2">
+                      {sAO.actionLabel}
+                    </button>
+                  </div>
+                )}
               
               </div>            
             </div>
