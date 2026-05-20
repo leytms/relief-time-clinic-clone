@@ -9,12 +9,14 @@ const appointmentOptions = [
     label: "Book online",
     description: "Choose a doctor and an available time slot",
     actionLabel: "Continue to booking",
+    actionHref: "/booking",
   },
   { 
     id: "call-clinic",
     label: "Call clinic",
     description: "Call the clinic during working hours",
     actionLabel: "Show phone number",
+    actionHref: "#",
   },
 ]
 
@@ -92,9 +94,11 @@ export default function Hero() {
                       {sAO.description}
                     </p>
                   
-                    <button className="border rounded mt-4 px-4 py-2">
+                    <a
+                     href={sAO.actionHref}
+                     className="border rounded inline-block mt-4 px-4 py-2">
                       {sAO.actionLabel}
-                    </button>
+                    </a>
                   </div>
                 )}
               
