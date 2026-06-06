@@ -1,7 +1,9 @@
+import Container from "@/components/Container"
+
 export default function Navbar() {
     return (
         <nav className="border-b">
-            <div className="max-w-6xl mx-auto px-4">
+            <Container>
                 <div className="flex justify-between items-center">
                     <h1 className="font-bold">Relief</h1>
 
@@ -12,7 +14,7 @@ export default function Navbar() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </Container>
         </nav>
     )
 }
