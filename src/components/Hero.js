@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Container from "@/components/Container"
+import Link from "next/link"
 
 const appointmentOptions = [ 
   { 
@@ -94,11 +95,11 @@ export default function Hero() {
                       {sAO.description}
                     </p>
                   
-                    <a
+                    <Link
                      href={sAO.actionHref}
                      className="border rounded inline-block mt-4 px-4 py-2">
                       {sAO.actionLabel}
-                    </a>
+                    </Link>
                   </div>
                 )}
               

@@ -45,7 +45,7 @@ export default function Features() {
                         description={feature.description}
                         icon={feature.icon}
                         button={feature.button}
-                        featured={feature}
+                        featured={feature.featured}
                         />                      
                     ))}
 
