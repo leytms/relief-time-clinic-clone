@@ -1,5 +1,22 @@
 import Container from "@/components/Container"
-
+type Specialty = {
+  id: string;
+  title: string;
+}
+const specialties: Specialty[] = [
+  {
+    id: "cardiology",
+    title: "Cardiology",
+  },
+  {
+    id: "dermatology",
+    title: "Dermatology",
+  },
+  {
+    id: "orthopedics",
+    title: "Orthopedics",
+  },
+]
 export default function BookingPage() {
   return (
     <main className="py-16">
