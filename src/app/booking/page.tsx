@@ -16,17 +16,17 @@ const doctors: Doctor[] = [
   {
     id: "dr-john-doe",
     name: "Dr. John Doe",
-    specialty: "Cardiology",
+    specialty: "cardiology",
   },
   {
     id: "dr-jane-doe",
     name: "Dr. Jane Doe",
-    specialty: "Dermatology",
+    specialty: "dermatology",
   },
   { 
     id: "dr-jim-beam",
     name: "Dr. Jim Beam",
-    specialty: "Orthopedics",
+    specialty: "orthopedics",
   },
 ]
 const specialties: Specialty[] = [
