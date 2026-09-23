@@ -1,8 +1,12 @@
+"use client"
+
+import { useState } from "react"
 import Container from "@/components/Container"
 type Specialty = {
   id: string;
   title: string;
 }
+
 const specialties: Specialty[] = [
   {
     id: "cardiology",
@@ -18,6 +22,10 @@ const specialties: Specialty[] = [
   },
 ]
 export default function BookingPage() {
+  const [selectedSpecialty, setSelectedSpecialty] = useState("")
+  const selectedSpecialtyObject = specialties.find((specialty) => {
+    return specialty.id === selectedSpecialty
+  })
   return (
     <main className="py-16">
       <Container>
@@ -33,11 +41,17 @@ export default function BookingPage() {
             <button
             key={specialty.id}
             className="px-4 py-2 text-gray-600"
+            onClick={() => setSelectedSpecialty(specialty.id)}
             >
               {specialty.title}
             </button>
           )
         })}
+        {selectedSpecialtyObject && (
+          <p className="mt-4 text-gray-600">
+            You selected: {selectedSpecialtyObject.title}
+          </p>
+        )}
       </Container>
     </main>
   )
