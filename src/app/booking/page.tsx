@@ -20,7 +20,7 @@ const doctors: Doctor[] = [
   },
   {
     id: "dr-jane-doe",
-    title: "Dr. Jane Doe",
+    name: "Dr. Jane Doe",
     specialty: "Dermatology",
   },
   { 
