@@ -6,7 +6,29 @@ type Specialty = {
   id: string;
   title: string;
 }
+type Doctor = {
+  id: string;
+  name: string;
+  specialty: string;
+}
 
+const doctors: Doctor[] = [
+  {
+    id: "dr-john-doe",
+    name: "Dr. John Doe",
+    specialty: "Cardiology",
+  },
+  {
+    id: "dr-jane-doe",
+    title: "Dr. Jane Doe",
+    specialty: "Dermatology",
+  },
+  { 
+    id: "dr-jim-beam",
+    name: "Dr. Jim Beam",
+    specialty: "Orthopedics",
+  },
+]
 const specialties: Specialty[] = [
   {
     id: "cardiology",
